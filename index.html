@@ -3,22 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <div id="myDIV" class="header">
       <h2>My To Do List</h2>
-      <input type="text" id="myInput" placeholder="Title..." />
-      <span onclick="newElement()" class="addBtn">Add</span>
+      <input type="text" id="myInput" placeholder="Add another task..." />
+      <span>Add</span>
     </div>
 
-    <ul id="myUL">
-      <li>Hit the gym</li>
-      <li class="checked">Pay bills</li>
-      <li>Meet George</li>
-      <li>Buy eggs</li>
-      <li>Read a book</li>
-      <li>Organize office</li>
+    <ul id="toDoList">
+      <li class="list-item">
+        <a
+          ><img
+            src="imgs/square-regular.svg"
+            alt="unchecked checkbox"
+            class="checkbox"
+        /></a>
+        Hit the gym
+      </li>
+      <li class="list-item">
+        <a
+          ><img
+            src="imgs/square-regular.svg"
+            alt="unchecked checkbox"
+            class="checkbox"
+        /></a>
+        Pay bills
+      </li>
+      <li class="list-item">
+        <a
+          ><img
+            src="imgs/square-regular.svg"
+            alt="unchecked checkbox"
+            class="checkbox"
+        /></a>
+        Meet friend
+      </li>
+      <li class="list-item">
+        <a
+          ><img
+            src="imgs/square-regular.svg"
+            alt="unchecked checkbox"
+            class="checkbox"
+        /></a>
+        Groceries
+      </li>
+      <li class="list-item">
+        <a
+          ><img
+            src="imgs/square-regular.svg"
+            alt="unchecked checkbox"
+            class="checkbox"
+        /></a>
+        Have lunch
+      </li>
+      <li class="list-item">
+        <a
+          ><img
+            src="imgs/square-regular.svg"
+            alt="unchecked checkbox"
+            class="checkbox"
+        /></a>
+        Read a book
+      </li>
+      <li class="list-item">
+        <a
+          ><img
+            src="imgs/square-regular.svg"
+            alt="unchecked checkbox"
+            class="checkbox"
+        /></a>
+        Organize office
+      </li>
     </ul>
   </body>
+  <script src="index.js"></script>
 </html>
