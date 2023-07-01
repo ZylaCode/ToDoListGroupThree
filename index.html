@@ -17,12 +17,15 @@
   </head>
   <body>
     <div id="myDIV" class="header">
+
       <h2>My To Do List</h2>
+            <span id = "date"></span>
+
       <input type="text" id="myInput" placeholder="Add another task..." />
-      <span>Add</span>
+      <span onclick="addItem()" class="addBtn">Add</span>
     </div>
 
-    <ul id="toDoList">
+    <ul id="myUL toDoList">
       <li class="list-item">
         <a
           ><img
@@ -87,6 +90,7 @@
         Organize office
       </li>
     </ul>
+
   </body>
   <script src="index.js"></script>
 
