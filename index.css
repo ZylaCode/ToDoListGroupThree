@@ -1,60 +1,66 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    font-size: 20px;
-}
-
-
-  .header {
-    background-color: lightblue;
-    padding: 30px 40px;
-    color: white;
-    text-align: center;
-  }
-
-  input {
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
-  }
-
-  .addBtn {
-    padding: 10px 10px;
-    margin-left: 20px;
-    width: 10%;
-    background: #d9d9d9;
-    color: #555;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 28%;
-  }
-  
-.checkbox {
-width: 1.5em;
-height: auto;}
-
-ul {
-    list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    
 }
+
+body {
+  display: flex;
+  justify-content: center;
+
+}
+
+ main {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px;
+  padding: 50px;
+  border: none; 
+  background: rgb(214, 240, 249);
+}
+
+main h1{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding-bottom: 20px;
+ font-weight: bolder;
+  font-size: 40px;
+  color: rgb(66, 20, 192);
+
+}
+
+input{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+
+#new-task-form {
+  align-self: flex-start;
+}
+
+main button{
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 30px;
+  margin-top: 20px;
+  background-color: rgb(153, 225, 251);
+  border: none;
+  font-weight: bolder;
+  color: rgb(94, 94, 182);
+}
+
+div {
+  margin-top: 20px;
+}
+
+p{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  color: rgba(22, 116, 238, 0.933);
+  font-size: 26px;
+  font-weight: 800;
+  padding: 2px;
+}  
