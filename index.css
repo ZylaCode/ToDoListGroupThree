@@ -1,66 +1,94 @@
-* {
+*{
     margin: 0 auto;
     padding: 0;
-    
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
+  width: 100%;
   display: flex;
   justify-content: center;
-
-}
+} 
 
  main {
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   margin: 100px;
   padding: 50px;
-  border: none; 
-  background: rgb(214, 240, 249);
+  background: rgb(214, 240, 249); 
+ }
+
+
+
+form input:focus{
+  outline: none;
+  border-color: #0d75ec;
 }
 
+
 main h1{
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
+  align-items: center;
   padding-bottom: 20px;
  font-weight: bolder;
   font-size: 40px;
   color: rgb(66, 20, 192);
+}
 
+main form {
+  align-items: center;
+  justify-content: center;
 }
 
 input{
   padding: 10px;
-  border-radius: 10px;
-  border: none;
-}
+  border-radius: 15px;
+  border-color: #0d75ec;
+  outline: none;
+} 
 
 
-#new-task-form {
-  align-self: flex-start;
-}
+::-webkit-input-placeholder {
+  text-align: center;
+  color:black
+} 
+
 
 main button{
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 15px;
+  padding: 9px;
   margin-left: 30px;
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: rgb(153, 225, 251);
-  border: none;
+  border-color: #0d75ec;
   font-weight: bolder;
+  font-size: 13px;
   color: rgb(94, 94, 182);
+  transition: 0.7s;
+  cursor: pointer;
+  outline: none;
 }
 
-div {
-  margin-top: 20px;
-}
 
-p{
+
+main div {
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
   font-family: 'Courier New', Courier, monospace;
   text-align: left;
   color: rgba(22, 116, 238, 0.933);
   font-size: 26px;
   font-weight: 800;
   padding: 2px;
+  margin-top: 20px;
 }  
+
+#tasks{
+  border-radius: 10px;
+  width: 100%;
+  background-color: #c7e9f8;
+  padding: 10px 5px;
+  margin-top: 30px;
+}

@@ -1,71 +1,76 @@
-// function displaydate() {
-//     let date = new Date()
-//     date = date.toString().split(" ")
-//     document.querySelector("#date").innerHTML = date[1] + " " + date[2] + " " + date[3]
-// }
-
-// window.onload = function(){
-//     displaydate()
-// }
-
-
 //// UPDATED JS
 
-const form = document.querySelector('#new-task-form');
-const input = document.querySelector('#new-task-input');
-const task = document.querySelector('#tasks');
+const form = document.querySelector('#task-form');
+const input = document.querySelector('#task-input');
+let taskList = document.querySelector('#tasks');
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     if (input.value.trim() === "") {
-        alert('Please add a task!')
+        alert("Please Enter a Task");
     } else {
-        // const task = input.value;
-
-        const paragraph= document.createElement('p')
-        paragraph.innerText = input.value;
-        paragraph.classList.add('p'); //this class connects to CSS for styling
-        task.appendChild(paragraph);
+        const newTask = document.createElement('div')
+        newTask.innerText = input.value;
+        // newTask.classList.add('div'); //CSS styling
+        taskList.appendChild(newTask);
         input.value = "";
 
-        paragraph.addEventListener('click', () => {
-            paragraph.style.textDecoration = 'line-through';
-        })
+        const newTaskActions = document.createElement('div'); //creates and stores task actions(delete, edit buttons)
+        // newTaskActions.classList.add('actions'); // CSS styling
+        newTask.appendChild(newTaskActions);
 
 
-        paragraph.addEventListener('dblclick', () => {
-            task.removeChild(paragraph);
-        })
+        // creating DELETE button
+        const deleteButton = document.createElement('button');
+        deleteButton.innerText = 'DELETE';
+        newTaskActions.appendChild(deleteButton);
+        deleteButton.addEventListener('click', deleteTask) 
 
-
-        // another option below but I don't know how to manage EDIT and DELETE buttons
-
-        // const buttonEdit = document.createElement('button')
-        // buttonEdit.classList.add('edit');
-        // buttonEdit.innerHTML = 'Edit';
-        // taskList.appendChild(buttonEdit);
-
-        // const buttonDelete = document.createElement('button')
-        // buttonDelete.classList.add('delete');
-        // buttonDelete.innerHTML = 'Delete';
-        // taskList.appendChild(buttonDelete);
-        // input.value = "";
-
-        // buttonEdit.addEventListener('click', () => {
-        //     if (buttonEdit.innerText === 'edit'){
-        //         paragraph.removeAttribute('input');
-        //     buttonEdit.innerText = 'Save';
-        //     } else {
-        //         return;
-        //     }          
-        // })
-
-        // buttonDelete.addEventListener('click', () => {
-        //     taskList.removeChild(paragraph);
+        // function that executes DELETE
+        function deleteTask(){
+            taskList.removeChild(newTask);
             
+        }  
+
+        // creating EDIT button
+        const editButton = document.createElement('button');
+        editButton.innerText = 'EDIT';
+        newTaskActions.appendChild(editButton);
+        editButton.addEventListener('click', () => {
+            if(editButton.innerText === 'EDIT'){
+                input.focus();
+                editButton.innerText = 'SAVE'  // something missing to SAVE new task !!!
+             } else {
+                 editButton.innerText = 'EDIT';         
+              }
+})
+}
+})
+
+
+
+const checkbox = document.querySelectorAll('.checkbox');
+
+            	let unchecked = true;
+
+                checkbox.forEach((checkbox)=>{
+                checkbox.addEventListener("click", ()=>{
+                     if (unchecked){checkbox.src = "imgs/square-check-regular.svg";
+                    } else {
+                     checkbox.src = "imgs/square-regular.svg"
+                     }
+                     unchecked = !unchecked
+        });
+        });
+
+
+        // paragraph.addEventListener('click', () => {
+        //     paragraph.style.textDecoration = 'line-through';
         // })
-  
-   
-    };
-});
+
+
+        // paragraph.addEventListener('dblclick', () => {
+        //     task.removeChild(paragraph);
+        // })
